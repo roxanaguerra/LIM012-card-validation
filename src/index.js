@@ -9,33 +9,43 @@ btnCheck.addEventListener('click', () => {
     let nambercreditcard = document.getElementById('namber_creditcard').value;
     let rev_nambercreditcard = (nambercreditcard.split('').reverse());
     //console.log('el reverso es: '+ rev_nambercreditcard);
-    let tarjetaValida = validator.isValid(rev_nambercreditcard);
+    //*******************************************************/
+    //VERIFICAR SI ES VALIDA O NO
+    let valid_card = validator.isValid(rev_nambercreditcard);
+    if (nambercreditcard.length <= 16) {
+        if (valid_card == true) {
+            let conf_validacion = document.getElementById('accepted');            
+            //conf_validacion.innerHTML = 'La tarjeta '+ type_card[i].value +' es valida ' + suma;
+            conf_validacion.innerHTML = 'La tarjeta es valida ';
+        } else {            
+            const conf_validacion2 = document.getElementById('rejected');
+            conf_validacion2.innerHTML = 'La tarjeta no es valida ';
+        }
+    }
+    else {
+        const alert = document.getElementById("alert_creditcard");
+        alert.innerHTML = 'INGRESAR NUMERO DE TARJETA';
+        //console.log(alert);
+    }
 
-    let tarjetaenmascarada = validator.maskify(nambercreditcard);
-    console.log('enmascarada',tarjetaenmascarada);
+
+    //*******************************************************/
+    //ENMASCARAR EL NUMERO DE LA TARJETA
+    let mask_card = validator.maskify(nambercreditcard);
+    //console.log('enmascarada',mask_card);
     
-
     //CONTENEDORES
     const cont1 = document.getElementById('contenedor1');
     const cont2 = document.getElementById('contenedor2');
     cont2.style.display = 'none';
 
     //*********************************************** */
-    //SI SON MENORES QUE 16 DIGITOS
-    console.log(nambercreditcard);
     const info = document.getElementById("saludo");
-    info.innerHTML = 'Hola tu numero de tarjeta es: '+ tarjetaenmascarada;
+    info.innerHTML = 'Hola tu numero de tarjeta es: '+ mask_card;
     //info.innerHTML = 'Hola tu numero de tarjeta es: ############'+cadena;
-    console.log(info);
+    //console.log(info);
     cont2.style.display = 'block';
-    cont1.style.display = 'none'; 
-    if (tarjetaValida == true) {
-        alert('es valida');
-    }
-    else{
-        alert('no es valida');
-    }  
-    
+    cont1.style.display = 'none';    
 })
 
 /*

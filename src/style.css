@@ -80,7 +80,7 @@ header img{
 }
 
 #contenedor1 {
-  position: absolute;
+  /*position: absolute;*/
   width: 403px;
   height: 249px;
   left: 50px;
@@ -122,3 +122,21 @@ header img{
   height: 40px;
 }
 
+#pie_principal { 
+  
+  position: relative;
+  width: 1200px;
+  height: 124px;
+  background: #052F83;
+  top: 400px; /*para separarlo de la parte superior*/
+  left: 5px; /*para separarlo de la parte izquierda*/
+}
+#pie_final {
+  
+  width: 1200px;
+  height: 50px;
+  position: relative;
+  background: #08194F;
+  top: 400px; /*para separarlo de la parte superior*/
+  left: 5px; /*para separarlo de la parte izquierda*/
+}
