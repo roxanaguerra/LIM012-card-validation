@@ -6,9 +6,66 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
+    <!--<header></header>
     <main></main>
-    <footer></footer>
+    <footer></footer>-->
+    <!--
+    <header>
+        <img src="img/logo.png" alt="">
+        <div id="busqueda">
+            <input type="text" id="buscar" placeholder="    Buscar en toda la UNAMBA">
+            <img src="img/lupa.png" alt="">
+        </div>
+    </header>
+    <div id="menu">
+        <ul>
+            <li><a href="">INICIO</a></li>
+            <li><a href="">ADMISIÓN</a></li>
+            <li><a href="">BIBLIOTECA</a></li>
+            <li class="selected"><a href="">PAGOS</a></li>
+            <li><a href="">CONTACTO</a></li>
+        </ul>
+    </div>
+    <br> -->
+    <h2><label for="">VALIDAR EL NUMERO DE SU TARJETA server</label> </h2>
+    
+    <div id="contenedor_principal">
+        <div id="contenedor1">
+            <h3>Pago con tarjeta de crédito o débito</h3>
+            <p>4137894711755904</p>
+            <!--<h5>Aceptamos estas tarjetas</h5>
+            <div id="type_img">
+                <img src="img/visa.png" id="visa_1">
+                <img src="img/master card.png" id="master_1">   
+                <img src="img/club.png" id="club_1"> 
+                <img src="img/american.png" id="american_1"> 
+            </div>-->
+            <br>
+            <p>Número de tarjeta</p>
+            <input type="text" placeholder="NUMERO DE TARJETA" id="namber_creditcard" maxlength="16" pattern="[0-9]" 
+                onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+            <br><br>
+            <form id="type_card">
+                <div class="">
+                  <label><input type="radio" name="tipos" value="VISA"> VISA <br></label>
+                  <label><input type="radio" name="tipos" value="MASTER CARD"> MASTER CARD <br></label>
+                  <label><input type="radio" name="tipos" value="DINERS CLUB"> DINERS CLUB <br></label>
+                  <label><input type="radio" name="tipos" value="AMERICAN EXPRESS"> AMERICAN EXPRESS <br></label>                
+                </div>                        
+            </form> 
+            
+            <label id="alert_creditcard"></label>
+            <button type="button" id="btn_check">VERIFICAR</button>
+        </div>
+    
+        <div id="contenedor2" class="ocultar">
+            <p id="saludo"></p>
+            <p id="accepted"></p>
+            <p id="rejected"></p>
+        </div>
+    
+    </div>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>

@@ -1,0 +1,124 @@
+.ocultar {
+    display: none;
+}
+
+body {
+  width: 1200px;
+  margin: auto;
+}
+
+header{
+  width: 1200px;
+  height: 90px; /*altura*/ 
+  background-color: rgb(236, 108, 108);
+  position: relative;
+  top: 20px;
+}
+
+header img{
+  position: absolute;
+  width: 326px;
+  height: 81px;
+  top: 5px; /*para separarlo de la parte superior*/
+  left: 5px; /*para separarlo de la parte izquierda*/
+}
+#busqueda input{
+  /*width: 200px;
+  height: 100px;*/
+  top: 30px;
+  left: 850px;
+  right: 300px;
+  float: right;
+  
+  position: absolute;
+  width: 279px;
+  height: 40px;
+  border: 1px solid #CCCCCC;
+  backdrop-filter: blur(50px);
+}
+
+#busqueda img{
+  position: absolute;
+  width: 44px;
+  height: 42px;
+  top: 30px;
+  left: 1085px;
+  right: 300px;
+}
+
+#menu{
+  background-color: #052f83;
+  /*width: 600px; no es necesario declarar*/
+  height: 70px;
+  border: 1px solid #ccc;
+  /*float: none;*/
+}
+#menu ul{
+    
+}
+
+#menu ul li{
+  list-style: none; /*quitar las viñetas de la lista*/
+  float: left; /* los elemetos de la lista estes en horizontal*/
+  margin-top: 15px;
+}
+
+#menu ul li a{
+  text-decoration: none; /*quitar el subrayado de las referencias - link*/
+  padding: 20px 70px; /*70 px es la sepacionque tendran entre los link*/
+  border: 0px solid #ccc;
+}
+
+#contenedor_principal{
+  background-color:white ;
+  position: absolute;
+  width: 558px;
+  height: 321px;
+  background: #F4F7F9;
+  top: 250px; /*para separarlo de la parte superior*/
+  left: 400px; /*para separarlo de la parte izquierda*/
+}
+
+#contenedor1 {
+  position: absolute;
+  width: 403px;
+  height: 249px;
+  left: 50px;
+}
+
+#img_card {
+  width: 500px;
+  height: 140px;
+  
+  float: left;
+}
+
+#type_img {
+  position: absolute;
+  width: 271px;
+  height: 37px;
+  top: 70px;
+}
+
+#visa_1{
+  
+  width: 56px;
+  height: 40px;
+}
+
+#master_1{
+  
+  width: 56px;
+  height: 40px;
+}
+#club_1{
+  
+  width: 56px;
+  height: 40px;
+}
+#american_1{
+  
+  width: 56px;
+  height: 40px;
+}
+
