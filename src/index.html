@@ -1,90 +1,127 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-
-    <!--<header></header>
-    <main></main>
-    <footer></footer>-->
-    
-    <header>
-        <img src="img/logo.png" alt="">
-        <div id="busqueda">
-            <input type="text" id="buscar" placeholder="    Buscar en toda la UNAMBA">
-            <img src="img/lupa.png" alt="">
-        </div>
-    </header>
-    <div id="menu">
-        <ul>
-            <li><a href="">INICIO</a></li>
-            <li><a href="">ADMISIÓN</a></li>
-            <li><a href="">BIBLIOTECA</a></li>
-            <li class="selected"><a href="">PAGOS</a></li>
-            <li><a href="">CONTACTO</a></li>
-        </ul>
-    </div>
-    <br>
-    <h2><label for="">VALIDAR EL NUMERO DE SU TARJETA</label> </h2>
-    
-    <div id="contenedor_principal">
-        <div id="contenedor1">
-            <h3>Pago con tarjeta de crédito o débito</h3>
-            <p>4137894711755904</p>
-            <h5>Aceptamos estas tarjetas</h5>
-            <div id="type_img">
-                <img src="img/visa.png" id="visa_1">
-                <img src="img/master card.png" id="master_1">   
-                <img src="img/club.png" id="club_1"> 
-                <img src="img/american.png" id="american_1"> 
+    <head> <!-- Los metadatos HTML son datos sobre el documento HTML. Los metadatos no se muestran -->
+        <meta charset="utf-8">
+        <title>Tarjeta de crédito válida</title> 
+        <link rel="stylesheet" href="style.css" /> <!-- se utiliza para vincular a hojas de estilo externas -->
+        <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos
+        de encabezado, así como también un logo, un formulario de búsqueda, un nombre de autor y otros componentes.-->
+        <header>
+            <img src="img/logo.png" alt="">
+            <div id="busqueda">
+                <input type="text" id="buscar" placeholder="Buscar en toda la UNAMBA">
+                <img src="img/lupa.png" alt="">
             </div>
-            <br>
-            <p>Número de tarjeta</p>
-            <input type="text" placeholder="NUMERO DE TARJETA" id="namber_creditcard" maxlength="16" pattern="[0-9]" 
-                onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
-            <br><br>
-            <form id="type_card">
-                <div class="">
-                  <label><input type="radio" name="tipos" value="VISA"> VISA <br></label>
-                  <label><input type="radio" name="tipos" value="MASTER CARD"> MASTER CARD <br></label>
-                  <label><input type="radio" name="tipos" value="DINERS CLUB"> DINERS CLUB <br></label>
-                  <label><input type="radio" name="tipos" value="AMERICAN EXPRESS"> AMERICAN EXPRESS <br></label>                
-                </div>                        
-            </form> 
-            
-            <label id="alert_creditcard"></label>
-            <button type="button" id="btn_check">VERIFICAR</button>
+        </header>
+
+        <div id="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="">ADMISIÓN</a></li>
+                    <li><a href="">BIBLIOTECA</a></li>
+                    <li class="selected"><a href="index.html">PAGOS</a></li>                
+                    <li><a href="">NOTICIAS</a></li>
+                    <li><a href="">CONTACTO</a></li>
+                </ul>
+            </nav>            
         </div>
-    
-        <div id="contenedor2" class="ocultar">
-            <p id="saludo"></p>
-            <p id="accepted"></p>
-            <p id="rejected"></p>
-        </div>        
-    </div>
-    <div id="pie_principal">
-        <label for="">UBICACIÓN</label>
-        <P>Av. Garcilazo de la Vega S/N Tamburco - Abancay - Apurímac</P>
-            <P>Horario de atención:</P>
-            <P>Lunes a Viernes de 7:30 a 15:30</P>
-            
-            
-            
-        <label for=""> CONTACTO
-            Central telefónica 083-321965
-            
-            Telefonos de Emergencia 083-321965</label>
-    </div>
-    <div id="pie_final">
-        <label for="">© 2019 Todos los Derechos Reservados | Unamba | ROXANA GUERRA APAZA</label>
-    </div>
-    
 
-    
+        <!-- Representa el contenido principal-->
+        <main id="contenedor_principal"> 
+            <h2>VALIDAR EL NUMERO DE SU TARJETA:</h2>                    
+            <div id="contenedor1" class="data_validation">
+                <h3>Pago con tarjeta de crédito o débito</h3>
+                <label for="">Aceptamos estas tarjetas</label>
+                <div id="type_img">
+                    <img src="img/visa.png" id="visa_1">
+                    <img src="img/master card.png" id="master_1">   
+                    <img src="img/club.png" id="club_1"> 
+                    <img src="img/american.png" id="american_1">
+                </div>
+                <br><br><br>
+                <label for="">Número de tarjeta:</label>       
+                <input type="text" id="namber_creditcard" maxlength="16" pattern="[0-9]" 
+                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">                
+                <p id="alert_creditcard"></p>
+                <div>
+                    <label for="">Fecha de Expiración:</label>
+                    <select name="select" id="select">
+                        <option value="Enero" selected>Enero</option> 
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                        <option value="Abril">Abril</option> 
+                        <option value="Mayo">Mayo</option>
+                        <option value="Junio">Junio</option>
+                        <option value="Julio">Julio</option> 
+                        <option value="Agosto">Agosto</option>
+                        <option value="Setiembre">Setiembre</option>
+                        <option value="Octubre">Octubre</option> 
+                        <option value="Noviembre">Noviembre</option>
+                        <option value="Diciembre">Diciembre</option>
+                    </select>
+                    <select name="select" id="select2">
+                        <option value="2020" selected>2020</option> 
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option> 
+                        <option value="2024">2024</option>
+                    </select>
+                </div><br>
+                
+                <div id="cvc_div">
+                    <label for="">CVC/CVV:</label>
+                    <input type="text" id="cvc_card" maxlength="4" pattern="[0-9]" 
+                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+                </div><br>
+                <label for="">Tipo de Tarjeta:</label>
+                <form id="type_card">
+                    <div class="">
+                    <label><input type="radio" name="tipos" value="VISA"> VISA <br></label>
+                    <label><input type="radio" name="tipos" value="MASTER CARD"> MASTER CARD <br></label>
+                    <label><input type="radio" name="tipos" value="DINERS CLUB"> DINERS CLUB <br></label>
+                    <label><input type="radio" name="tipos" value="AMERICAN EXPRESS"> AMERICAN EXPRESS <br></label>                
+                    </div>                        
+                </form> <br>
+                
+                <button type="button" id="btn_check">VERIFICAR</button>
+                
+            </div>
+        
+            <div id="contenedor2" class="ocultar">
+                <p id="saludo"></p>
+                <p id="accepted"></p>
+                <p id="rejected"></p>  
+                <input type="button" value="Empezar de Nuevo!" onclick="location.reload()">
+            </div>
+        </main>
+        
+        <br>
+        
+        <!-- Define un pie de página para un documento o sección -->
+        <footer>
+            <div id="pie_principal">
+                <label for="">UBICACIÓN</label>
+                <P>Av. Garcilazo de la Vega S/N Tamburco - Abancay - Apurímac</P>
+                    <P>Horario de atención:</P>
+                    <P>Lunes a Viernes de 7:30 a 15:30</P>   
+                <!--<div id="contacto">
+                    <label for=""> CONTACTO </label>
+                    <p>Central telefónica 083-321965</p>
+                    <p>Telefonos de Emergencia 083-321965</p>
+                </div>  -->
+                
+            </div>
+            <div id="pie_final">
+                <label for="">© 2019 Todos los Derechos Reservados | Unamba | ROXANA GUERRA APAZA</label>
+            </div>
+        </footer>
 
-    <script src="index.js" type="module"></script>
-  </body>
+        
+
+        <script src="index.js" type="module"></script>
+    </body>
 </html>

@@ -1,7 +1,5 @@
 const validator = {
-  isValid : (creditCardNumber) => {
-       //&& creditCardNumber.length>=1
-    if (creditCardNumber.length <= 16 ) {
+  isValid : (creditCardNumber) => {    
       let suma = 0;
       let n = 0;
       for (let i = 0; i <creditCardNumber.length; i++) {
@@ -28,7 +26,7 @@ const validator = {
       else {
         return false;
       }
-    }    
+    
   },
 
   maskify : (creditCardNumber) => {
