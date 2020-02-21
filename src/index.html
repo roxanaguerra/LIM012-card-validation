@@ -45,12 +45,12 @@
                 <br><br><br>
                 <label for="">Número de tarjeta:</label>     
                 <input type="text" id="namber_creditcard" maxlength="16" pattern="[0-9]" 
-                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">                
+                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" value="8888888888888888">                
                 <p id="alert_creditcard"></p>
                 <div>
                     <label for="">Fecha de Expiración:</label>
                     <select name="select" id="months" class="select">
-                        <option value="Enero" selected>Enero</option> 
+                        <option value="Enero" >Enero</option> 
                         <option value="Febrero">Febrero</option>
                         <option value="Marzo">Marzo</option>
                         <option value="Abril">Abril</option> 
@@ -75,7 +75,7 @@
                 <div id="cvc_div">
                     <label for="">CVC/CVV:</label>
                     <input type="text" id="cvc_card" maxlength="4" pattern="[0-9]" 
-                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" >
                 </div><br>
                 <label for="">Tipo de Tarjeta:</label>
                 <form id="type_card">
@@ -92,9 +92,24 @@
             </div>
         
             <div id="contenedor2" class="ocultar">
+                <em><label for="">HOLA! </label></em>
                 <p id="saludo"></p>
-                <p id="accepted"></p>
-                <p id="rejected"></p>  
+                <em>Fecha de Expiración:</em>
+                <p id="months_v"></p>
+                <p id="years_v"></p>
+                <em>CVC/CVV:</em>
+                <p id="cvc_v"></p>
+                <label for="">Tipo de Tarjeta:</label>
+                <p id = "type_v"></p>
+                <div id="accepted">
+                
+                </div>
+               
+
+
+                <!--<p id="rejected"></p>   si la tarjeta no es valida-->
+                
+                
                 <button type="button" onclick="location.reload()">Empezar de Nuevo!</button>
             </div>
         </main>

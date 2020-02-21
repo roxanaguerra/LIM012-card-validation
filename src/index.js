@@ -15,32 +15,66 @@ btnCheck.addEventListener('click', () => {
     //VERIFICAR SI ES VALIDA O NO
     let valid_card = validator.isValid(rev_nambercreditcard);
     if (nambercreditcard.length <= 16 && nambercreditcard.length>=1) {
-        //*******************************************************/
-        //ENMASCARAR EL NUMERO DE LA TARJETA
-        let mask_card = validator.maskify(nambercreditcard);
-        //console.log('enmascarada',mask_card);
         
         //CONTENEDORES
         const cont1 = document.getElementById('contenedor1');
         const cont2 = document.getElementById('contenedor2');
         cont2.style.display = 'none';
 
-        //*********************************************** */
-        const info = document.getElementById("saludo");
-        info.innerHTML = 'Hola tu numero de tarjeta es: '+ mask_card;
-        //info.innerHTML = 'Hola tu numero de tarjeta es: ############'+cadena;
-        //console.log(info);
-        cont2.style.display = 'block';
-        cont1.style.display = 'none';
-
         //VERIFICANDO LO QUE ME RETORNA
         if (valid_card == true) {
+
+            //*******************************************************/
+            //ENMASCARAR EL NUMERO DE LA TARJETA
+            let mask_card = validator.maskify(nambercreditcard);
+            //console.log('enmascarada',mask_card);
+                        
+
+            //*********************************************** */
+            const info = document.getElementById("saludo");
+            info.innerHTML = 'Tu numero de tarjeta es: '+ mask_card;
+            
+            //*********************************************** */
+            // CAPTURANDO EL VALOR DE LOS SELECT - MESES Y AÑO DE EXPIRACION
+            const months_value = document.getElementById("months").value;
+            const meses = document.getElementById('months_v');
+            meses.innerHTML = months_value;
+
+            const years_value = document.getElementById("years").value;
+            const años = document.getElementById('years_v');
+            años.innerHTML = years_value;
+
+            //CAPTURANDO EL VALOR DE EL CVC - CVV
+            const codigo_cvc = document.getElementById("cvc_card").value;
+            const cod_cvc = document.getElementById("cvc_v");
+            cod_cvc.innerHTML = codigo_cvc;
+            
+
+            //CAPTURANDO EL VALOR DE LOS INPUT TYPE=RADIO
+            let radio_v = "";
+            const radio_value = document.getElementsByName("tipos");
+            for (let i = 0; i < radio_value.length; i++) {
+                if (radio_value[i].checked) {
+                    radio_v = radio_value[i].value;
+                }
+                
+            }
+
+            const tipo_c = document.getElementById("type_v");
+            tipo_c.innerHTML = radio_v;
+
+            //*********** MOSTRANDO CONTENEDOR 2 */
+            cont2.style.display = 'block';
+            cont1.style.display = 'none';
+
             let conf_validacion = document.getElementById('accepted');            
             //conf_validacion.innerHTML = 'La tarjeta '+ type_card[i].value +' es valida ' + suma;
-            conf_validacion.innerHTML = 'La tarjeta es valida ';
+            conf_validacion.innerHTML = 'LA TARJETA ES VALIDA ';
         } else {            
+            /*
             const conf_validacion2 = document.getElementById('rejected');
-            conf_validacion2.innerHTML = 'La tarjeta no es valida ';
+            conf_validacion2.innerHTML = 'LA TARJETA NO ES VALIDA '; */
+            alert('LA TARJETA NO ES VALIDA ');
         }
     }
     else {
