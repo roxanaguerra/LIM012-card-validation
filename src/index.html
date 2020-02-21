@@ -5,7 +5,7 @@
         <title>Tarjeta de crédito válida</title> 
         <link rel="stylesheet" href="style.css" /> <!-- se utiliza para vincular a hojas de estilo externas -->
         <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-    </head>
+    </head> 
     <body>
         <!--representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos
         de encabezado, así como también un logo, un formulario de búsqueda, un nombre de autor y otros componentes.-->
@@ -43,13 +43,13 @@
                     <img src="img/american.png" id="american_1">
                 </div>
                 <br><br><br>
-                <label for="">Número de tarjeta:</label>       
+                <label for="">Número de tarjeta:</label>     
                 <input type="text" id="namber_creditcard" maxlength="16" pattern="[0-9]" 
                     onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">                
                 <p id="alert_creditcard"></p>
                 <div>
                     <label for="">Fecha de Expiración:</label>
-                    <select name="select" id="select">
+                    <select name="select" id="months" class="select">
                         <option value="Enero" selected>Enero</option> 
                         <option value="Febrero">Febrero</option>
                         <option value="Marzo">Marzo</option>
@@ -63,7 +63,7 @@
                         <option value="Noviembre">Noviembre</option>
                         <option value="Diciembre">Diciembre</option>
                     </select>
-                    <select name="select" id="select2">
+                    <select name="select" id="years" class="select">
                         <option value="2020" selected>2020</option> 
                         <option value="2021">2021</option>
                         <option value="2022">2022</option>
@@ -87,7 +87,7 @@
                     </div>                        
                 </form> <br>
                 
-                <button type="button" id="btn_check">VERIFICAR</button>
+                <button type="button" id="btn_check" class="button">VERIFICAR</button>
                 
             </div>
         
@@ -95,7 +95,7 @@
                 <p id="saludo"></p>
                 <p id="accepted"></p>
                 <p id="rejected"></p>  
-                <input type="button" value="Empezar de Nuevo!" onclick="location.reload()">
+                <button type="button" onclick="location.reload()">Empezar de Nuevo!</button>
             </div>
         </main>
         
@@ -108,15 +108,15 @@
                 <P>Av. Garcilazo de la Vega S/N Tamburco - Abancay - Apurímac</P>
                     <P>Horario de atención:</P>
                     <P>Lunes a Viernes de 7:30 a 15:30</P>   
-                <!--<div id="contacto">
+                <div id="contacto">
                     <label for=""> CONTACTO </label>
                     <p>Central telefónica 083-321965</p>
                     <p>Telefonos de Emergencia 083-321965</p>
-                </div>  -->
+                </div>
                 
             </div>
             <div id="pie_final">
-                <label for="">© 2019 Todos los Derechos Reservados | Unamba | ROXANA GUERRA APAZA</label>
+                <label id="autor">© 2019 Todos los Derechos Reservados | Unamba | ROXANA GUERRA APAZA</label>
             </div>
         </footer>
 

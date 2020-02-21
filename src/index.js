@@ -44,9 +44,11 @@ btnCheck.addEventListener('click', () => {
         }
     }
     else {
+        /*
         const alert = document.getElementById("alert_creditcard");
-        alert.innerHTML = 'Ingresar numero';
+        alert.innerHTML = 'Ingresar numero';*/
         //console.log(alert);
+        alert('Ingresar numero');
     }      
 })
 

@@ -1,18 +1,23 @@
 .ocultar {
     display: none;
 }
-
-body {
-  width: 1400px; /*ancho de un elemento*/
+html {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+body { 
+  width: 100%; /*ancho de un elemento*/
   margin: auto; /*margen para los cuatro lados de un elemento -> margin: 70px;*/
   font-family: 'Times New Roman';
+  
 }
 
 header {  
   height: 90px; /*altura*/ 
   background-color: white;
-  position: sticky; /*posicion para que no se mueva esta etiqueta*/
-  top: 20px; /*para separarlo de la parte superior*/  
+  /*position: sticky; /*posicion para que no se mueva esta etiqueta*/
+  top: 20px; /*para separarlo de la parte superior*/ 
+  position: relative; 
 }
 
 header img {  
@@ -103,7 +108,7 @@ nav li a:hover { /*cuando el mouse pase por ahi*/
 #contenedor_principal{
   position: absolute;
   width: 500px;
-  height: 500px;
+  height: 470px;
   background: #F4F7F9; /*color del fondo #F4F7F9*/
   top: 200px; /*para separarlo de la parte superior*/
   left: 430px;/*para separarlo de la parte izquierda*/  
@@ -114,22 +119,21 @@ nav li a:hover { /*cuando el mouse pase por ahi*/
 }
 
 #contenedor1 {
-  max-width: 360px;
+  max-width: 350px;
   margin-left: 45px;
   background-color: rgba(241, 181, 15, 0.4);
 }
 
 label {
-  color: bl; /*4b4a4a*/  
+  color: blue; /*4b4a4a*/  
   font-size: 16px;
-  font-weight: 70;
 }
 #namber_creditcard {
   border: 1px solid #CCCCCC;
-  border-radius: 2px;
-  color: #4b4a4a; /*4b4a4a*/  
-  top: 20px; /*para separarlo de la parte superior*/
-  right: 50px; /*para separarlo de la parte derecha*/  
+  border-radius: 3px;
+  color: red; /*4b4a4a*/  
+  /*top: 20px; /*para separarlo de la parte superior*/
+  /*right: 50px; /*para separarlo de la parte derecha*/  
   width: 200px;
   height: 30px;
   padding-left: 15px; /*escribir con un espacio en el input*/
@@ -139,25 +143,24 @@ label {
   color: red;
 }
 
-#select {
+.select {
   border: 1px solid rgba(128,138,157,.5);
   border-radius: 4px;
   background-color: transparent;
   color: black;
-  height: 30px;
+  height: 35px;
   padding: .45rem .5rem;
+}
+
+#years{
+  width: 80px;
+
+}
+  
+#months {
   width: 115px;
 }
 
-#select2 {
-  border: 1px solid rgba(128,138,157,.5);
-  border-radius: 4px;
-  background-color: transparent;
-  color: black;
-  height: 30px;
-  padding: .45rem .5rem;
-  width: 80px;
-}
 
 #cvc_card {
   border: 1px solid #CCCCCC;
@@ -171,36 +174,44 @@ label {
   font-family: 'Times New Roman'; 
 }
 
-footer {
-  display: block;
+button {
+  height:35px;
+  width: 100%;
+  position: relative; /*con absolute: se sale del div; con relative esta dentro del div*/
+  background-color: #ffc107;
+  color: black;
+}
+  
+
+footer {  
+  
 }
 
 #pie_principal {  
-  position: relative;
-  
-  height: 124px;
+  position: relative;  
+  height: 100px; /*alto del elemento : vertical*/
   background: #052F83;
   top: 550px; /*para separarlo de la parte superior*/
-  left: 5px; /*para separarlo de la parte izquierda*/
+  padding-left: 40px; /*para separarlo de la parte izquierda*/
+  padding-top: 15px;
   color: #99A5B9;
-  line-height: 1; /*es la sangria, el espacio de separacion*/
-  
+  line-height: .5; /*es la sangria, el espacio de separacion*/  
 }
 
 #contacto{
-  top: 600px; /*para separarlo de la parte superior*/
-  left: 100px;
+  position: absolute;
+  padding-left: 1000px; /*para separarlo de la parte izquierda*/  
+  color: #99A5B9;
+  line-height: .5; /*es la sangria, el espacio de separacion*/
+  top: 15px;
 }
 
-
-
-#pie_final {  
-  
+#pie_final {    
   height: 50px;
   position: relative; /*la barra azul este abajo*/
   background: #08194F;
-  top: 450px; /*para separarlo de la parte superior*/
-  left: 5px; /*para separarlo de la parte izquierda*/
+  top: 550px; /*para separarlo de la parte superior*/
+  padding-top: 15px;
   color: white;
   text-align: center;
 }
@@ -209,6 +220,9 @@ footer {
   color: rgb(248, 135, 60);
 }
 
+#pie_final label{
+  color: white;
+}
 
 
 
