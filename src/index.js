@@ -32,7 +32,7 @@ btnCheck.addEventListener('click', () => {
 
             //*********************************************** */
             const info = document.getElementById("saludo");
-            info.innerHTML = 'Tu numero de tarjeta es: '+ mask_card;
+            info.innerHTML =  mask_card;
             
             //*********************************************** */
             // CAPTURANDO EL VALOR DE LOS SELECT - MESES Y AÑO DE EXPIRACION
