@@ -17,7 +17,6 @@ body {
   width: 100%; /*ancho de un elemento*/
   margin: auto; /*margen para los cuatro lados de un elemento -> margin: 70px;*/
   font-family: 'Times New Roman';
-  
 }
 
 header {  
@@ -53,8 +52,8 @@ input {
   position: absolute;
   width: 40px;
   height: 40px;
-  top: 23px;
-  left: 1150px;  
+  top: 20px;
+  right: 50px;
 }
 
 nav {  
@@ -119,17 +118,16 @@ nav li a:hover { /*cuando el mouse pase por ahi*/
   height: 470px;
   background: #F4F7F9; /*color del fondo #F4F7F9*/
   top: 200px; /*para separarlo de la parte superior*/
-  left: 430px;/*para separarlo de la parte izquierda*/  
+  left: 38%;/*para separarlo de la parte izquierda*/  
   margin-top: 15px; /*para bajar el texto: centrar*/
   line-height: 1; /*es la sangria, el espacio de separacion*/
   font-size: 16px;
-  padding-left: 35px;
 }
 
 #contenedor1 {
   max-width: 355px;
   margin-left: 45px;
-  background-color: #F4F7F9;
+  background-color: rgb(243, 241, 241);
   padding-left: 15px;
 }
 
@@ -227,7 +225,7 @@ button {
 
 #contacto{
   position: absolute;
-  padding-left: 950px; /*para separarlo de la parte izquierda*/  
+  padding-left: 75%; /*para separarlo de la parte izquierda*/  
   color: #99A5B9;
   line-height: .5; /*es la sangria, el espacio de separacion*/
   top: 15px;
