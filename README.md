@@ -5,7 +5,7 @@
 * [1. Resumen del proyecto](#1-resumen-del-proyecto)
 * [2. Vista del proyecto final](#2-vista-del-proyecto-final)
 * [3. Usuarios y objetivos del producto](#3-usuarios-y-objetivos-del-producto)
-* [4. Cómo soluciona los problemas/necesidades de los usuarios](#4-cómo-soluciona-los-problemas/necesidades-de-los-usuarios)
+* [4. Cómo soluciona los problemas necesidades de los usuarios](#4-cómo-soluciona-los-problemas-necesidades-de-los-usuarios)
 * [5. Primer prototipo en papel](#5-primer-prototipo-en-papel)
 * [6. Resumen del feedback recibido indicando las mejoras a realizar](#6-resumen-del-feedback-recibido-indicando-las-mejoras-a-realizar)
 * [7. Imagen del prototipo final](#7-imagen-del-prototipo-final)
@@ -34,7 +34,7 @@ El objetivo principal del producto es **validar** si la tarjeta que está ingres
 * Verificar fecha de caducidad.	
 * Enmascarar el número de la tarjeta (seguridad).
 
-## 4. Cómo soluciona los problemas/necesidades de los usuarios
+## 4. Cómo soluciona los problemas necesidades de los usuarios
 
 * Los estudiantes tendrán más facilidad para poder realizar cualquier pago que deseen, (matriculas, pensiones, cursos extras, grados, documentos, etc.)
 * Podrán realizar el pago 24/7, ya no tendrán que hacerlo solo en un cierto rango de tiempo (atención en el banco o tesorería de la Universidad).
