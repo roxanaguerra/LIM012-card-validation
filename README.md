@@ -44,7 +44,7 @@ El objetivo principal del producto es **validar** si la tarjeta que está ingres
 
 ## 5. Primer prototipo en papel
 
-![prototipo en papel](https://github.com/roxanaguerra/LIM012-card-validation/blob/master/src/img/FIGMA%20CREDIT_CARD.PNG)
+![prototipo en papel]()
 
 ## 6. Resumen del feedback recibido indicando las mejoras a realizar
 
