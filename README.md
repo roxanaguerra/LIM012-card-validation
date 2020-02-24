@@ -19,7 +19,7 @@ Con este proyecto se podrá validar si una tarjeta es válida o no, para realiza
 
 ![gráfica de algoritmo de Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
 
-(https://github.com/roxanaguerra/LIM012-card-validation/blob/5386d45cfec558d24505aac29545fa915fe682c3/src/img/icono%20card2.jpg)
+![vista del proyecto final credit card](https://github.com/roxanaguerra/LIM012-card-validation/blob/5386d45cfec558d24505aac29545fa915fe682c3/src/img/icono%20card2.jpg)
 
 ## 3. Usuarios y objetivos del producto
 
