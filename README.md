@@ -44,7 +44,7 @@ El objetivo principal del producto es **validar** si la tarjeta que está ingres
 
 ## 5. Primer prototipo en papel
 
-![prototipo en papel]()
+![prototipo en papel](https://github.com/roxanaguerra/LIM012-card-validation/blob/master/src/img/FIGMA%20CREDIT_CARD.PNG)
 
 ## 6. Resumen del feedback recibido indicando las mejoras a realizar
 
@@ -52,7 +52,7 @@ El objetivo principal del producto es **validar** si la tarjeta que está ingres
  
 * Otra cosa también que me estaba dificultando era ingresar solo números al input, bloquear el ingreso de letras, igual estaba buscando información y encontré un input de type=' number ' que solo ingresaba números, pero con esta etiqueta no se podía usar el ‘maxlength’. Una coach me dijo que averigüe expresiones regulares, buscando y buscando mi compañera de Squad encontró algo que nos ayudó y hacer que un input de type='text' podamos limitarlo a que solo se ingrese números.
 
-**Como una recomendación mía seria, todas las chicas tenemos dudas y sé que hay dudas que se deben de repetir mucho y hasta estar errando en lo mismo, y si se ve que las chicas o la mayoría sigue con eso, hacer como una recomendación general y así todas poder re direccionarnos de nuevo.
+*Como una recomendación mía seria, todas las chicas tenemos dudas y sé que hay dudas que se deben de repetir mucho y hasta estar errando en lo mismo, y si se ve que las chicas o la mayoría sigue con eso, hacer como una recomendación general y así todas poder re direccionarnos de nuevo.*
 
 
 ## 7. Imagen del prototipo final
