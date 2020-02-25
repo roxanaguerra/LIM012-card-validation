@@ -1,7 +1,6 @@
-.ocultar {
+.hide_container {
     display: none;
 }
-
 
 em {
   font-size: 2em;
@@ -10,8 +9,7 @@ em {
 
 html {
   padding-left: 50px;
-  padding-right: 50px;
-  
+  padding-right: 50px;  
 }
 body { 
   width: 100%; /*ancho de un elemento*/
@@ -32,7 +30,7 @@ header img {
   height: 85px;  
 }
 
-#busqueda input {  
+#search input {  
   top: 20px; /*para separarlo de la parte superior*/
   right: 50px; /*para separarlo de la parte derecha*/   
   position: absolute; /**/
@@ -48,7 +46,7 @@ input {
   padding-left: 15px;
 }
 
-#busqueda img {
+#search img {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -56,7 +54,7 @@ input {
   right: 50px;
 }
 
-nav {  
+nav {
   /*width: 600px; no es necesario declarar*/
   height: 70px;
 }
@@ -122,16 +120,18 @@ nav li a:hover { /*cuando el mouse pase por ahi*/
   margin-top: 15px; /*para bajar el texto: centrar*/
   line-height: 1; /*es la sangria, el espacio de separacion*/
   font-size: 16px;
+  
 }
 
-#contenedor1 {
+#container1 {
   max-width: 355px;
   margin-left: 45px;
   background-color: rgb(243, 241, 241);
   padding-left: 15px;
+  
 }
 
-#contenedor2 {
+#container2 {
   
   max-width: 355px;
   margin-left: 45px;
@@ -158,7 +158,7 @@ label {
   padding-left: 15px; /*escribir con un espacio en el input*/
   font-family: 'Times New Roman'; 
 }
-#alert_creditcard {
+#alert_creditcard, #rejected {
   color: red;
 }
 
