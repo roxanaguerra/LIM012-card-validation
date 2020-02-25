@@ -1,7 +1,5 @@
 import validator from './validator.js';
 
-//console.log(validator);
-
 const btnCheck = document.getElementById("btn_check");
 
 btnCheck.addEventListener('click', () => {
@@ -10,29 +8,31 @@ btnCheck.addEventListener('click', () => {
     let rev_nambercreditcard = (nambercreditcard.split('').reverse());
     //console.log('el reverso es: '+ rev_nambercreditcard);     
 
-
     //*******************************************************/
     //VERIFICAR SI ES VALIDA O NO
     let valid_card = validator.isValid(rev_nambercreditcard);
     if (nambercreditcard.length <= 16 && nambercreditcard.length>=1) {
-        
-        //CONTENEDORES
-        const cont1 = document.getElementById('contenedor1');
-        const cont2 = document.getElementById('contenedor2');
-        cont2.style.display = 'none';
-
+                
         //VERIFICANDO LO QUE ME RETORNA
         if (valid_card == true) {
+
+            //CONTENEDORES - USANDO CLASSLIST
+            const cont1 = document.getElementById('container1');
+            const cont2 = document.getElementById('container2');
+            cont1.classList.add('hide_container');
+            cont2.classList.remove('hide_container');
+            
+            /*********** MOSTRANDO CONTENEDOR 2 
+            cont2.style.display = 'block';
+            cont1.style.display = 'none';*/
 
             //*******************************************************/
             //ENMASCARAR EL NUMERO DE LA TARJETA
             let mask_card = validator.maskify(nambercreditcard);
             //console.log('enmascarada',mask_card);
                         
-
-            //*********************************************** */
-            const info = document.getElementById("saludo");
-            info.innerHTML =  mask_card;
+            const info = document.getElementById("mask_creditCardNumber");
+            info.innerHTML =  mask_card; /* enviando el numero enmascarado */
             
             //*********************************************** */
             // CAPTURANDO EL VALOR DE LOS SELECT - MESES Y AÑO DE EXPIRACION
@@ -45,9 +45,9 @@ btnCheck.addEventListener('click', () => {
             años.innerHTML = years_value;
 
             //CAPTURANDO EL VALOR DE EL CVC - CVV
-            const codigo_cvc = document.getElementById("cvc_card").value;
+            const code_cvc = document.getElementById("cvc_card").value;
             const cod_cvc = document.getElementById("cvc_v");
-            cod_cvc.innerHTML = codigo_cvc;
+            cod_cvc.innerHTML = code_cvc;
             
 
             //CAPTURANDO EL VALOR DE LOS INPUT TYPE=RADIO
@@ -59,30 +59,22 @@ btnCheck.addEventListener('click', () => {
                 }
                 
             }
-
             const tipo_c = document.getElementById("type_v");
             tipo_c.innerHTML = radio_v;
-
-            //*********** MOSTRANDO CONTENEDOR 2 */
-            cont2.style.display = 'block';
-            cont1.style.display = 'none';
 
             let conf_validacion = document.getElementById('accepted');            
             //conf_validacion.innerHTML = 'La tarjeta '+ type_card[i].value +' es valida ' + suma;
             conf_validacion.innerHTML = 'LA TARJETA ES VALIDA ';
-        } else {            
-            /*
+
+        } 
+        else {           
             const conf_validacion2 = document.getElementById('rejected');
-            conf_validacion2.innerHTML = 'LA TARJETA NO ES VALIDA '; */
-            alert('LA TARJETA NO ES VALIDA ');
+            conf_validacion2.innerHTML = 'LA TARJETA NO ES VALIDA '; 
         }
     }
-    else {
-        /*
+    else {        
         const alert = document.getElementById("alert_creditcard");
-        alert.innerHTML = 'Ingresar numero';*/
-        //console.log(alert);
-        alert('Ingresar numero');
+        alert.innerHTML = 'Ingresar numero';
     }      
 })
 

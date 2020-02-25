@@ -1,6 +1,6 @@
 const validator = {
   isValid : (creditCardNumber) => {    
-      let suma = 0;
+      let sum = 0;
       let n = 0;
       for (let i = 0; i <creditCardNumber.length; i++) {
         /*         
@@ -17,10 +17,10 @@ const validator = {
               //console.log('sum>10 ->'+n);
             }
         }
-        suma = suma + n;  
+        sum = sum + n;  
         //console.log(suma);     
       }
-      if (suma % 10 == 0) {        
+      if (sum % 10 == 0) {        
         return true;
       }
       else {
@@ -31,21 +31,21 @@ const validator = {
 
   maskify : (creditCardNumber) => {
     //CONVIRTIENDO 
-    let numero_convertido = creditCardNumber.toString().split('');
+    let creditCardNumber_converted = creditCardNumber.toString().split('');
     
-    for (let i = numero_convertido.length - 1; i >= 0; i--) {
+    for (let i = creditCardNumber_converted.length - 1; i >= 0; i--) {
       
-      if (i > numero_convertido.length - 5) {          
+      if (i > creditCardNumber_converted.length - 5) {          
         //console.log( numero_convertido[i]);
       }
       else
       {
-        numero_convertido[i] = '#';          
+        creditCardNumber_converted[i] = '#';          
       }         
     }
-    let juntaNumeros = numero_convertido.join('');  
+    let join_creditCardNumber = creditCardNumber_converted.join('');  
     //console.log('numero es: '+ juntaNumeros);  
-    return juntaNumeros;
+    return join_creditCardNumber;
   }
 };
 

@@ -11,7 +11,7 @@
         de encabezado, así como también un logo, un formulario de búsqueda, un nombre de autor y otros componentes.-->
         <header>
             <img src="img/logo.png" alt="">
-            <div id="busqueda">
+            <div id="search">
                 <input type="text" id="buscar" placeholder="Buscar en toda la UNAMBA">
                 <img src="img/lupa.png" alt="">
             </div>
@@ -33,7 +33,7 @@
         <!-- Representa el contenido principal-->
         <main id="contenedor_principal"> 
             <h2>VALIDAR EL NUMERO DE SU TARJETA:</h2>                    
-            <div id="contenedor1" class="data_validation">
+            <div id="container1" class="data_validation">
                 <h3>Pago con tarjeta de crédito o débito</h3>
                 <label for="">Aceptamos estas tarjetas</label>
                 <div id="type_img">
@@ -46,7 +46,7 @@
                 <label for="">Número de tarjeta:</label>     
                 <input type="text" id="namber_creditcard" maxlength="16" pattern="[0-9]" 
                     onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">                
-                <p id="alert_creditcard"></p>
+                <p id="alert_creditcard"></p>   <!--ingresar numeros-->
                 <div>
                     <label for="">Fecha de Expiración:</label>
                     <select name="select" id="months" class="select">
@@ -86,16 +86,17 @@
                     <label><input type="radio" name="tipos" value="AMERICAN EXPRESS"> AMERICAN EXPRESS <br></label>                
                     </div>                        
                 </form> <br>
-                
+                <p id="rejected"></p>   <!--si la tarjeta no es valida-->
                 <button type="button" id="btn_check" class="button">VERIFICAR</button>
                 
             </div>
         
-            <div id="contenedor2" class="ocultar">
-                <label for=""><em>HOLA!</em></label><br>
+            <div id="container2" class="hide_container">
+                <label><em>HOLA!</em></label><br>
                 <label for="">TU TARJETA ES: </label>
-                <label id="saludo" class="info_c2"></label><br>
-                <label for="">Fecha de Expiración: </label><label id="months_v" class="info_c2"></label>
+                <label id="mask_creditCardNumber" class="info_c2"></label><br>
+                <label>Fecha de Expiración: </label>
+                <label id="months_v" class="info_c2"></label>
                 <label id="years_v" class="info_c2"></label><br>
                 
                 <label for="">CVC/CVV:</label> 
@@ -106,7 +107,7 @@
                     <div id="accepted">                
                     </div>
                 </em>
-                <!--<p id="rejected"></p>   si la tarjeta no es valida-->
+                
                 <button type="button" onclick="location.reload()">VOLVER!</button>
             </div>
         </main>
@@ -121,7 +122,7 @@
                 <p>Horario de atención:</p>
                 <p>Lunes a Viernes de 7:30 a 15:30</p>  
                 <div id="contacto">
-                    <label for=""> CONTACTO </label>
+                    <label> CONTACTO </label>
                     <p>Central telefónica 083-321965</p>
                     <p>Telefonos de Emergencia 083-321965</p>
                 </div>
