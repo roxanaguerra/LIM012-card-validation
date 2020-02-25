@@ -5,7 +5,7 @@
 * [1. Resumen del proyecto](#1-resumen-del-proyecto)
 * [2. Vista del proyecto final](#2-vista-del-proyecto-final)
 * [3. Usuarios y objetivos del producto](#3-usuarios-y-objetivos-del-producto)
-* [4. Cómo soluciona los problemas/necesidades de los usuarios](#4-cómo-soluciona-los-problemas/necesidades-de-los-usuarios)
+* [4. Cómo soluciona los problemas/necesidades de los usuarios](#4-cómo-soluciona-los-problemas-necesidades-de-los-usuarios)
 * [5. Primer prototipo en papel](#5-primer-prototipo-en-papel)
 * [6. Resumen del feedback recibido indicando las mejoras a realizar](#6-resumen-del-feedback-recibido-indicando-las-mejoras-a-realizar)
 * [7. Imagen del prototipo final](#7-imagen-del-prototipo-final)
