@@ -1,11 +1,11 @@
+// eslint-disable-next-line import/extensions
 import validator from './validator.js';
 
-const btnCheck = document.getElementById("btn_check");
+const btnCheck = document.getElementById('btn_check');
 
 btnCheck.addEventListener('click', () => {
-    
-    let nambercreditcard = document.getElementById('namber_creditcard').value;
-    let rev_nambercreditcard = (nambercreditcard.split('').reverse());
+  const nambercreditcard = document.getElementById('namber_creditcard').value;
+  const revNambercreditcard = (nambercreditcard.split('').reverse());
     //console.log('el reverso es: '+ rev_nambercreditcard);     
 
     //*******************************************************/
@@ -86,4 +86,16 @@ console.log( '############'+cadena);
 //PROBANDO EL USO DEL SPLIT
 let separar = nambercreditcard.split('');
 console.log(separar);
-*/
+
+
+/* function sumita(p1, p2) {
+  const resultado = p1 + p2;
+  return resultado;
+}
+
+//Invocar a la función
+sumita(1,2) // 3 
+
+
+describe('algo', ()=>{})
+ */
