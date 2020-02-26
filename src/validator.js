@@ -2,15 +2,13 @@ const validator = {
   isValid : (creditCardNumber) => {    
       let sum = 0;
       let n = 0;
-      for (let i = 0; i <creditCardNumber.length; i++) {
-        /*         
-        const element = creditCardNumber[i];        
-        console.log('['+ i + '] -> ' + element);*/
+      for (let i = 0; i <creditCardNumber.length; i++) {        
         if (i%2 == 0) {            
-            n = (creditCardNumber[i]- '0');
+            n = parseInt(creditCardNumber[i]);
+            
         }
         else {
-            n = (creditCardNumber[i]-'0')*2
+            n = parseInt(creditCardNumber[i])*2
             //console.log('(*2) ->' + n);
             if (n >= 10) {
               n = (n - 10) + 1;

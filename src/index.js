@@ -69,12 +69,12 @@ btnCheck.addEventListener('click', () => {
         } 
         else {           
             const conf_validacion2 = document.getElementById('rejected');
-            conf_validacion2.innerHTML = 'LA TARJETA NO ES VALIDA '; 
+            conf_validacion2.innerHTML = '**LA TARJETA NO ES VALIDA**'; 
         }
     }
     else {        
         const alert = document.getElementById("alert_creditcard");
-        alert.innerHTML = 'Ingresar numero';
+        alert.innerHTML = '**Ingresar numero';
     }      
 })
 

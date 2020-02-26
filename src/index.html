@@ -10,25 +10,24 @@
         <!--representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos
         de encabezado, así como también un logo, un formulario de búsqueda, un nombre de autor y otros componentes.-->
         <header>
-            <img src="img/logo.png" alt="">
-            <div id="search">
+            <img src="img/logo.png" id="logo">
+            <div>
                 <input type="text" id="buscar" placeholder="Buscar en toda la UNAMBA">
-                <img src="img/lupa.png" alt="">
-            </div>
+                <img src="img/lupa.png" id="lupa">  
+            </div>          
+                      
         </header>
 
-        <div id="menu">
-            <nav>
-                <ul>
-                    <li><a href="index.html">INICIO</a></li>
-                    <li><a href="">ADMISIÓN</a></li>
-                    <li><a href="">BIBLIOTECA</a></li>
-                    <li class="selected"><a href="index.html">PAGOS</a></li>                
-                    <li><a href="">NOTICIAS</a></li>
-                    <li><a href="">CONTACTO</a></li>
-                </ul>
-            </nav>            
-        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="">ADMISIÓN</a></li>
+                <li><a href="">BIBLIOTECA</a></li>
+                <li><a href="index.html">PAGOS</a></li>                
+                <li><a href="">NOTICIAS</a></li>
+                <li><a href="">CONTACTO</a></li>
+            </ul>
+        </nav>
 
         <!-- Representa el contenido principal-->
         <main id="contenedor_principal"> 
@@ -42,7 +41,7 @@
                     <img src="img/club.png" id="club_1"> 
                     <img src="img/american.png" id="american_1">
                 </div>
-                <br><br><br>
+                <br>
                 <label for="">Número de tarjeta:</label>     
                 <input type="text" id="namber_creditcard" maxlength="16" pattern="[0-9]" 
                     onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">                
@@ -79,13 +78,13 @@
                 </div><br>
                 <label for="">Tipo de Tarjeta:</label>
                 <form id="type_card">
-                    <div class="">
-                    <label><input type="radio" name="tipos" value="VISA"> VISA <br></label>
-                    <label><input type="radio" name="tipos" value="MASTER CARD"> MASTER CARD <br></label>
-                    <label><input type="radio" name="tipos" value="DINERS CLUB"> DINERS CLUB <br></label>
-                    <label><input type="radio" name="tipos" value="AMERICAN EXPRESS"> AMERICAN EXPRESS <br></label>                
+                    <div class="type_radio">
+                        <label><input type="radio" name="tipos" value="VISA"> VISA <br></label>
+                        <label><input type="radio" name="tipos" value="MASTER CARD"> MASTER CARD <br></label>
+                        <label><input type="radio" name="tipos" value="DINERS CLUB"> DINERS CLUB <br></label>
+                        <label><input type="radio" name="tipos" value="AMERICAN EXPRESS"> AMERICAN EXPRESS <br></label>                
                     </div>                        
-                </form> <br>
+                </form>
                 <p id="rejected"></p>   <!--si la tarjeta no es valida-->
                 <button type="button" id="btn_check" class="button">VERIFICAR</button>
                 
@@ -117,10 +116,12 @@
         <!-- Define un pie de página para un documento o sección -->
         <footer>
             <div id="pie_principal">
-                <label for="">UBICACIÓN</label>
-                <p>Av. Garcilazo de la Vega S/N Tamburco - Abancay - Apurímac</p>
-                <p>Horario de atención:</p>
-                <p>Lunes a Viernes de 7:30 a 15:30</p>  
+                <div>
+                    <label for="">UBICACIÓN</label>
+                    <p>Av. Garcilazo de la Vega S/N Tamburco - Abancay - Apurímac</p>
+                    <p>Horario de atención:</p>
+                    <p>Lunes a Viernes de 7:30 a 15:30</p>  
+                </div>                
                 <div id="contacto">
                     <label> CONTACTO </label>
                     <p>Central telefónica 083-321965</p>
