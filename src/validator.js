@@ -1,50 +1,46 @@
 const validator = {
-  isValid : (creditCardNumber) => {    
-      let sum = 0;
-      let n = 0;
-      for (let i = 0; i <creditCardNumber.length; i++) {        
-        if (i%2 == 0) {            
-            n = parseInt(creditCardNumber[i]);
-            
-        }
-        else {
-            n = parseInt(creditCardNumber[i])*2
-            //console.log('(*2) ->' + n);
-            if (n >= 10) {
-              n = (n - 10) + 1;
-              //console.log('sum>10 ->'+n);
-            }
-        }
-        sum = sum + n;  
-        //console.log(suma);     
-      }
-      if (sum % 10 == 0) {        
-        return true;
+  isValid: (creditCardNumber) => {
+    let sum = 0;
+    let multiply = 0;
+    for (let i = 0; i < creditCardNumber.length; i += 1) {
+      if (i % 2 === 0) {
+        // multiply = parseInt(creditCardNumber[i]);
+        multiply = (creditCardNumber[i] - '0');
       }
       else {
-        return false;
+        // multiply = parseInt(creditCardNumber[i]) * 2;
+        multiply = (creditCardNumber[i] - '0') * 2;
+        // console.log('(*2) ->' + multiply);
+        if (multiply >= 10) {
+          multiply = (multiply - 10) + 1;
+          // console.log('sum>10 ->'+multiply);
+        }
       }
-    
+      sum += multiply;
+      // console.log(suma);
+    }
+    if (sum % 10 === 0) {
+      return true;
+    }
+    else {
+      return false;
+    }
   },
 
-  maskify : (creditCardNumber) => {
-    //CONVIRTIENDO 
-    let creditCardNumber_converted = creditCardNumber.toString().split('');
-    
-    for (let i = creditCardNumber_converted.length - 1; i >= 0; i--) {
-      
-      if (i > creditCardNumber_converted.length - 5) {          
-        //console.log( numero_convertido[i]);
+  maskify: (creditCardNumber) => {
+    // CONVIRTIENDO
+    const creditCardNumberConverted = creditCardNumber.toString().split('');
+    for (let i = creditCardNumberConverted.length - 1; i >= 0; i -= 1) {
+      if (i > creditCardNumberConverted.length - 5) {
+        // console.log( numero_convertido[i]);
       }
-      else
-      {
-        creditCardNumber_converted[i] = '#';          
-      }         
+      else {
+        creditCardNumberConverted[i] = '#';
+      }
     }
-    let join_creditCardNumber = creditCardNumber_converted.join('');  
-    //console.log('numero es: '+ juntaNumeros);  
-    return join_creditCardNumber;
-  }
+    const joinNumberCreditCard = creditCardNumberConverted.join('');
+    // console.log('numero es: '+ juntaNumeros);
+    return joinNumberCreditCard;
+  },
 };
-
 export default validator;
